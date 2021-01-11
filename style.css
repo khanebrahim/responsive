@@ -8,18 +8,29 @@ main{
     margin:0 auto;
     
 }
-.top-player{
+.top-player, .blog {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
     grid-gap: 30px;
     margin-top: 20px;
    }
-.playe{
+.top-player{
+    grid-template-columns: repeat(3, 1fr);
+  } 
+.blog{
+    grid-template-columns: repeat(2, 1fr);
+  }
+.player, .blog{
     display: flex;
     align-items: center;
 }
 .top-player img{
     height: 50px;
+    margin-right: 20px;
+
+}
+.thumbnail img{
+    width: 200px;
     margin-right: 20px;
 
 }
@@ -31,10 +42,14 @@ main{
   
     }
 }
-media (max-width:668px){
+@media (max-width:668px){
     .top-player{
     
      grid-template-columns: repeat(2, 1fr);
+     
+    .blog{
+         display: block;
+     }
   
   
     }
